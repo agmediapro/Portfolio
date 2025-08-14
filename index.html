@@ -9,43 +9,39 @@
     :root { --bg:#0b1220; --fg:#eaf0ff; --muted:#98a2b3; --accent:#4f46e5; }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
-    .wrap{max-width:1000px;margin:0 auto;padding:24px}
-    header{padding:32px 0 16px;display:flex;flex-direction:column;gap:8px}
+    .wrap{max-width:100%;margin:0;padding:0}
+    header{padding:16px;display:flex;flex-direction:column;gap:8px;align-items:center}
     h1{margin:0;font-size:28px}
-    p.sub{margin:0;color:var(--muted)}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
     .btn{padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18);text-decoration:none;color:var(--fg);background:transparent;backdrop-filter:saturate(140%) blur(2px)}
     .btn.primary{background:var(--accent);border-color:var(--accent);color:white}
-    .viewer{margin-top:16px;background:#111827;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;min-height:70vh}
-    iframe{width:100%;height:80vh;border:0}
-    footer{opacity:.7;font-size:14px;padding:24px 0;text-align:center}
-    @media (max-width:640px){h1{font-size:22px}iframe{height:75vh}}
+    .viewer{margin:0;background:#111827;border:none;border-radius:0;overflow:hidden;height:100vh}
+    iframe{width:100%;height:100%;border:0}
+    footer{opacity:.7;font-size:14px;padding:12px;text-align:center}
+    @media (max-width:640px){h1{font-size:22px}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Portfolio</h1>
-      <p class="sub">Découvrez mon travail. Fichier PDF consultable et téléchargeable.</p>
-      <div class="cta">
-        <a class="btn primary" href="#viewer">Voir le portfolio</a>
-        <a class="btn" href="portfolio.pdf" download>Télécharger le PDF</a>
-      </div>
-    </header>
+  <header>
+    <h1>Portfolio</h1>
+    <div class="cta">
+      <a class="btn primary" href="#viewer">Voir le portfolio</a>
+      <a class="btn" href="portfolio.pdf" download>Télécharger le PDF</a>
+    </div>
+  </header>
 
-    <section id="viewer" class="viewer">
-      <!-- Placez votre fichier PDF dans le même dossier et renommez-le "portfolio.pdf" -->
-      <iframe src="portfolio.pdf#view=FitH" title="Portfolio PDF"></iframe>
-    </section>
+  <section id="viewer" class="viewer">
+    <!-- Placez votre fichier PDF dans le même dossier et renommez-le "portfolio.pdf" -->
+    <iframe src="portfolio.pdf#view=FitH" title="Portfolio PDF"></iframe>
+  </section>
 
-    <noscript>
-      <p>Le visionnage intégré nécessite JavaScript. Vous pouvez <a href="portfolio.pdf">ouvrir le PDF ici</a>.</p>
-    </noscript>
+  <noscript>
+    <p>Le visionnage intégré nécessite JavaScript. Vous pouvez <a href="portfolio.pdf">ouvrir le PDF ici</a>.</p>
+  </noscript>
 
-    <footer>
-      © 2025 — Contact : <a href="mailto:agmediapro.ci@gmail.com" style="color:inherit">agmediapro.ci@gmail.com</a> •
-      <a href="portfolio.pdf" style="color:inherit">Ouvrir le PDF dans un nouvel onglet</a>
-    </footer>
-  </div>
+  <footer>
+    © 2025 — Contact : <a href="mailto:agmediapro.ci@gmail.com" style="color:inherit">agmediapro.ci@gmail.com</a> •
+    <a href="portfolio.pdf" style="color:inherit">Ouvrir le PDF dans un nouvel onglet</a>
+  </footer>
 </body>
 </html>
